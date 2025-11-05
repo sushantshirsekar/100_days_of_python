@@ -1,32 +1,48 @@
-# ===================================================
-# Script-Purpose : Calculates total pizza bill based
-# on size and add-ons.
-# ===================================================
+# =======================================================
+# Script-Purpose: Treasure Island Game, 
+# A simple text adventure where you find the treasure.
+# =======================================================
 
-print("Welcome to Python Pizza Deliveries!")
-size = input("What size pizza do you want? S, M or L: ")
-pepperoni = input("Do you want pepperoni on your pizza? Y or N: ")
-extra_cheese = input("Do you want extra cheese? Y or N: ")
-total_bill = 0
-if size.lower() == 's':
-    total_bill = total_bill +  15
-    if pepperoni.lower() == 'y':
-        total_bill = total_bill + 2
-    if extra_cheese.lower() == 'y':
-        total_bill = total_bill + 1
-elif size.lower() == 'm' :
-    total_bill = total_bill + 20
-    if pepperoni.lower() == 'y':
-        total_bill = total_bill + 3
-    if extra_cheese.lower() == 'y':
-        total_bill = total_bill + 1
-elif size.lower() == 'l' :
-    total_bill = total_bill + 25
-    if pepperoni.lower() == 'y':
-        total_bill = total_bill + 3
-    if extra_cheese.lower() == 'y':
-        total_bill = total_bill + 1
+print(r'''
+*******************************************************************************
+          |                   |                  |                     |
+ _________|________________.=""_;=.______________|_____________________|_______
+|                   |  ,-"_,=""     `"=.|                  |
+|___________________|__"=._o`"-._        `"=.______________|___________________
+          |                `"=._o`"=._      _`"=._                     |
+ _________|_____________________:=._o "=._."_.-="'"=.__________________|_______
+|                   |    __.--" , ; `"=._o." ,-"""-._ ".   |
+|___________________|_._"  ,. .` ` `` ,  `"-._"-._   ". '__|___________________
+          |           |o`"=._` , "` `; .". ,  "-._"-._; ;              |
+ _________|___________| ;`-.o`"=._; ." ` '`."\ ` . "-._ /_______________|_______
+|                   | |o ;    `"-.o`"=._``  '` " ,__.--o;   |
+|___________________|_| ;     (#) `-.o `"=.`_.--"_o.-; ;___|___________________
+____/______/______/___|o;._    "      `".o|o_.--"    ;o;____/______/______/____
+/______/______/______/_"=._o--._        ; | ;        ; ;/______/______/______/_
+____/______/______/______/__"=._o--._   ;o|o;     _._;o;____/______/______/____
+/______/______/______/______/____"=._o._; | ;_.--"o.--"_/______/______/______/_
+____/______/______/______/______/_____"=.o|o_.--""___/______/______/______/____
+/______/______/______/______/______/______/______/______/______/______/_____ /
+*******************************************************************************
+''')
+print("Welcome to Treasure Island.")
+print("Your mission is to find the treasure.")
+
+first_inp = input('Left or right? ')
+
+if first_inp.lower() == 'left':
+    second_inp = input('swim or wait? ')
+    if second_inp.lower() == 'wait':
+        third_inp = input('Which colored door you choose? ')
+        if third_inp.lower() == 'yellow':
+            print('You Win!')
+        elif third_inp.lower() == 'blue':
+            print('Eaten by beasts.\nGame Over.')
+        elif third_inp.lower() == 'red':
+            print('Burned by fire.\nGame Over.')
+        else:
+            print('Game Over.')
+    else:
+        print('Attacked by Trout.\nGame Over.')
 else:
-    print('''We don't have a pizza of your choice!''')
-
-print('Your final bill is: $' + str(total_bill)+'.')
+    print('Fall into a hole.\nGame Over!')
