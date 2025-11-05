@@ -29,4 +29,4 @@ elif size.lower() == 'l' :
 else:
     print('''We don't have a pizza of your choice!''')
 
-print('Your total bill is: ' + str(total_bill))
+print('Your final bill is: $' + str(total_bill)+'.')
