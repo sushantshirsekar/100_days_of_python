@@ -24,7 +24,8 @@ for count_dots in range(1, number_of_dots):
         timmy.setheading(180)
         timmy.forward(500)
         timmy.setheading(0)
-
+        
+timmy.hideturtle()
 # To lock screen, to see output
 screen = t.Screen()
 screen.exitonclick()
