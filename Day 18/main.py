@@ -11,7 +11,7 @@ t.colormode(255)
 timmy.speed("fastest")
 timmy.teleport(-250, -250)
 number_of_dots = 101
-
+timmy.hideturtle()
 
 for count_dots in range(1, number_of_dots):
     timmy.dot(20,random.choice(color_list))
@@ -25,7 +25,6 @@ for count_dots in range(1, number_of_dots):
         timmy.forward(500)
         timmy.setheading(0)
         
-timmy.hideturtle()
 # To lock screen, to see output
 screen = t.Screen()
 screen.exitonclick()
